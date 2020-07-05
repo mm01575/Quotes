@@ -1,4 +1,4 @@
-This is my Final Year Project I competed at the University of Surrey.
+This is my Final Year Project I completed at the University of Surrey.
 
 In order to access this project you must have a Linux (Ubuntu) Operating System.
 
