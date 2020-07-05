@@ -1,24 +1,15 @@
-# README
+This is my Final Year Project I competed at the University of Surrey.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In order to access this project you must have a Linux (Ubuntu) Operating System.
 
-Things you may want to cover:
+Once you download the project, remember to extract the files.
 
-* Ruby version
+Once the file has been extracted, go onto the Ubuntu Terminal and type "cd Quotes"
 
-* System dependencies
+Once you are in the file on the Terminal, you can access the project by typing in "Rails S" which will open the rails server.
 
-* Configuration
+Go onto any web brower and type in "localhost:3000"
 
-* Database creation
+Enjoy!!
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    - Murtaza Moosvi
