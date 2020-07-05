@@ -1,0 +1,65 @@
+<table id="myTable" align="center">
+  <thead class="header1">
+    <tr class="header">
+
+      <p></p>
+
+      <h1 align="center">
+        All Quotes:
+      </h1>
+
+      <p></p>
+
+      <th>Quote</th>
+      <th>By:</th>
+      <th>Genre</th>
+      <th>Link</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quotes.each do |quote| %>
+    <tr>
+      <td><%= link_to quote.abbreviated_quote, quote %></td>
+      <td><%= quote.name %></td>
+      <td><%= quote.genre %></td>
+      <td><%= quote.link %></td>
+      <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
+      <!-- <td><%= link_to 'Destroy', quote, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<body>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+    }
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+
+    }
+
+    td, th {
+      border: 1px solid #000000;
+      text-align: left;
+      padding: 15px;
+    }
+
+    th {
+      background-color: #FFFAFA;
+    }
+
+    tr {
+      background-color: #FFE4B5;
+    }
+
+    tr:nth-child(even) {
+      background-color: #87CEFA;
+    }
+  </style>
+</body>

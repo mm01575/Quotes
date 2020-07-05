@@ -1,0 +1,149 @@
+<html>
+
+<h1 align="center">Here are some quotes for you to look at!</h1>
+<h2 align="center">Click one of the Circle Buttons to see some Quotes from Movies, TV Shows or Real-Life Quotes!</h2>
+
+<body>
+  <div class="center">
+    <button type="button" name="button" onclick="location.href='<%= movie_quotes_path() %>';">
+      <span class="circle-1 circle">
+        <span class="circle-2 circle">
+          <span class="circle-3 circle">
+            <span class="icon">Movies</span>
+          </span>
+        </span>
+      </span>
+    </button>
+    <button type="button" name="button" onclick="location.href='<%= tv_show_quotes_path() %>';">
+      <span class="circle-1 circle">
+        <span class="circle-2 circle">
+          <span class="circle-3 circle">
+            <span class="icon">TV Show</span>
+          </span>
+        </span>
+      </span>
+    </button>
+    <button type="button" name="button" onclick="location.href='<%= real_life_quotes_path() %>';">
+      <span class="circle-1 circle">
+        <span class="circle-2 circle">
+          <span class="circle-3 circle">
+            <span class="icon">Real-Life</span>
+          </span>
+        </span>
+      </span>
+    </button>
+  </div>
+</body>
+
+<body>
+  <style>
+
+    @keyframes pop1 {
+      0% {
+        transform: scale(0);
+      }
+      70% {
+        transform: scale(1.15);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    button {
+      width: 6.5rem;
+      height: 6rem;
+      border: 0;
+      background-color: #99ffff;
+      transition: 250ms;
+      cursor: pointer;
+    }
+    button:hover .circle-1, button:focus .circle-1 {
+      background-color: #7ad4f8;
+    }
+    button:nth-child(2) .circle {
+      animation-delay: 1000ms;
+    }
+    button:nth-child(2) .circle-2 {
+      animation-delay: 1500ms;
+    }
+    button:nth-child(2) .circle-3 {
+      animation-delay: 1750ms;
+    }
+    button:nth-child(2) .icon {
+      animation-delay: 2250ms;
+    }
+    button:nth-child(3) .circle {
+      animation-delay: 2000ms;
+    }
+    button:nth-child(3) .circle-2 {
+      animation-delay: 2500ms;
+    }
+    button:nth-child(3) .circle-3 {
+      animation-delay: 2750ms;
+    }
+    button:nth-child(3) .icon {
+      animation-delay: 3250ms;
+    }
+    button:nth-child(4) .circle {
+      animation-delay: 3000ms;
+    }
+    button:nth-child(4) .circle-2 {
+      animation-delay: 3500ms;
+    }
+    button:nth-child(4) .circle-3 {
+      animation-delay: 3750ms;
+    }
+    button:nth-child(4) .icon {
+      animation-delay: 4250ms;
+    }
+    .circle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .circle-1 {
+      border-radius: 50%;
+      width: 6rem;
+      height: 6rem;
+      background-color: #99ffff;
+      transform: scale(0);
+      animation: pop1 250ms ease-out forwards;
+    }
+    .circle-2 {
+      width: 5.25rem;
+      height: 5.25rem;
+      border-radius: 50%;
+      background-color: #000;
+      transform: scale(0);
+      animation: pop1 250ms ease-out 250ms forwards;
+    }
+    .circle-3 {
+      border-radius: 50%;
+      width: 3.75rem;
+      height: 3.75rem;
+      background-color: #fff;
+      transform: scale(0);
+      animation: pop1 250ms ease-out 500ms forwards;
+    }
+    .icon {
+      transform: scale(0);
+      animation: pop1 250ms linear 1000ms forwards;
+    }
+
+    .center {
+      text-align: center;
+      padding: 70px 0;
+    }
+
+  </style>
+</body>
+
+<p></p>
+  <div align="center">
+    <img src="https://media.giphy.com/media/HPF2HULclHx9m/giphy.gif" alt="Whoops Image Not Available">
+    <img src="https://media.giphy.com/media/3og0IBJugq2uf9lGwg/giphy.gif" alt="Whoops Image Not Available">
+    <img src="https://media.giphy.com/media/HPF2HULclHx9m/giphy.gif" alt="Whoops Image Not Available">
+
+  </div>
+
+</html>

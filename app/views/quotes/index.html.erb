@@ -1,0 +1,126 @@
+<html>
+<p id="notice"><%= notice %></p>
+
+<h1 align="center">
+  Quotes:
+</h1>
+
+<h3 align="center">
+  Search Quotes:
+</h3>
+
+  <p></p>
+  <form class="example" style="margin:auto; max-width:380px">
+    <input type="text" id="myInput" onkeyup="SearchFX()" placeholder="Search Quotes">
+  </form>
+
+  <p></p>
+  <p></p>
+
+ <body>
+  <script type="text/javascript">
+    window.onload = function() {
+      var rows = document.querySelectorAll('tr:not(.header)');
+
+      for (var i = 0; i < rows.length; i++) {
+        rows[i].style.display = 'none';
+      }
+    }
+
+    function SearchFX() {
+      var input, filter, table, tr, td, i;
+
+      input = document.getElementById("myInput");
+
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        td1 = tr[i].getElementsByTagName("td")[1];
+        if (td+td1) {
+          if ((td.innerHTML.toUpperCase().indexOf(filter)+td1.innerHTML.toUpperCase().indexOf(filter)) > -2) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+
+          }
+        }
+      }
+
+      var rows = document.querySelectorAll('tr:not(.header)');
+
+      if (input.value.length == 0) {
+        for (var i = 0; i < rows.length; i++) {
+          rows[i].style.display = 'none';
+        }
+      }
+    }
+  </script>
+
+
+  <script type='text/javascript'>
+    (function()
+    {
+      if( window.localStorage ){
+        if(!localStorage.getItem('firstReLoad')){
+          localStorage['firstReLoad'] = true;
+          window.location.reload();
+        } else {
+          localStorage.removeItem('firstReLoad');
+        }
+      }
+    })();
+  </script>
+<body>
+
+
+<body>
+  <style>
+    body {
+      font-family: Arial;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    form.example input[type=text] {
+      padding: 10px;
+      font-size: 17px;
+      border: 1px solid grey;
+      float: left;
+      width: 80%;
+      background: #f1f1f1;
+    }
+
+    form.example button {
+      float: left;
+      width: 20%;
+      padding: 10px;
+      background: #2196F3;
+      color: white;
+      font-size: 17px;
+      border: 1px solid grey;
+      border-left: none;
+      cursor: pointer;
+    }
+
+    form.example button:hover {
+      background: #0b7dda;
+    }
+
+    form.example::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+  </style>
+
+</body>
+
+<%= render 'quotes/body' %>
+<%= render 'quotes/footer' %>
+
+
+</html>

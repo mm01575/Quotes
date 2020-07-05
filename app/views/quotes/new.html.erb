@@ -1,0 +1,49 @@
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  <strong>Note:</strong> Please Click the Bottom Left Button on the PIN Pad after entering the PIN
+</div>
+
+<div class="center1">
+  <h2 class="title center2 animated"></h2>
+  <div class="center2 pinRC">
+
+    <h1>New Quote</h1>
+
+    <%= render 'form', quote: @quote %>
+
+    <%= link_to 'Back', quotes_path %>
+
+    <a class="pinR"></a>
+  </div>
+  <div class="pinC animated">
+
+    <p></p>
+  </div>
+</div>
+
+<%= render 'quotes/pin' %>
+
+<body>
+  <style>
+    .alert {
+      padding: 20px;
+      background-color: #f44336;
+      color: white;
+    }
+
+    .closebtn {
+      margin-left: 15px;
+      color: white;
+      font-weight: bold;
+      float: right;
+      font-size: 22px;
+      line-height: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .closebtn:hover {
+      color: black;
+    }
+  </style>
+</body>
